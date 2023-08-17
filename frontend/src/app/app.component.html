@@ -1,0 +1,13 @@
+<div class="main-container h-full" [ngClass]="{'login-container': route.url.startsWith('/auth') }">
+  <div class="header">
+  <app-header></app-header>
+    <!-- <app-clock></app-clock> -->
+  </div>
+  <div class="sidebar h-full" *ngIf="!route.url.startsWith('/auth')">
+    <app-navbar></app-navbar>
+  </div>
+  <main class="main h-full overflow-y-auto">
+    <router-outlet></router-outlet>
+  </main>
+
+</div>
